@@ -4072,14 +4072,7 @@ typeof navigator === "object" && (function (global, factory) {
         _this.onChange();
       }); // Fullscreen toggle on double click
 
-      on.call(this.player, this.player.elements.container, 'dblclick', function (event) {
-        // Ignore double click in controls
-        if (is$1.element(_this.player.elements.controls) && _this.player.elements.controls.contains(event.target)) {
-          return;
-        }
 
-        _this.toggle();
-      }); // Tap focus when in fullscreen
 
       on.call(this, this.player.elements.container, 'keydown', function (event) {
         return _this.trapFocus(event);
